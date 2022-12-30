@@ -2,8 +2,6 @@ import React, { useCallback, useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import "./rangeSlider.scss";
 
-const style = {};
-
 const RangeSlider = ({ min, max, onChange }) => {
     const [minVal, setMinVal] = useState(min);
     const [maxVal, setMaxVal] = useState(max);

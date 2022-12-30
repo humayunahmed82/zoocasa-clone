@@ -1,10 +1,9 @@
 import React from "react";
 import bannerImage from "../../assets/banner.jpg";
-import TabBuy from "../Tab/TabBuy";
-import TabRent from "../Tab/TabRent";
 import TabView from "../Tab/TabView";
+import TabSearch from "../TabSearch/TabSearch";
 
-const Banner = () => {
+const Banner = (props) => {
     return (
         <div className="w-full h-screen relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black/50">
             <img
@@ -15,7 +14,7 @@ const Banner = () => {
             <div className="absolute top-0 z-[2] left-0 w-full h-full flex items-center">
                 <div className="container">
                     <div className="text-center">
-                        <h2 className="text-5xl font-frank text-white">
+                        <h2 className="text-3xl md:text-5xl font-frank text-white">
                             Find your home with us
                         </h2>
                         <p className="text-white font-normal mt-3">
@@ -30,12 +29,22 @@ const Banner = () => {
                                 {
                                     id: 1,
                                     name: "Buy",
-                                    content: <TabBuy />,
+                                    content: (
+                                        <TabSearch
+                                            className="buy"
+                                            onClick={props.onClick}
+                                        />
+                                    ),
                                 },
                                 {
                                     id: 2,
                                     name: "Rent",
-                                    content: <TabRent />,
+                                    content: (
+                                        <TabSearch
+                                            className="rent"
+                                            onClick={props.onClick}
+                                        />
+                                    ),
                                 },
                             ]}
                         />

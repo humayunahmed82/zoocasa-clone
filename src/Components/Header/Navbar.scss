@@ -16,12 +16,12 @@
 
             &:hover {
                 & > .sub-item {
-                    @apply opacity-100 top-full;
+                    @apply opacity-100 visible top-full;
                 }
             }
         }
         & .sub-item {
-            @apply absolute py-4 shadow-lg bg-white min-w-[210px] w-full  top-[115%] left-0 opacity-0 transition-all ease-linear duration-300 whitespace-nowrap;
+            @apply absolute py-4 shadow-lg bg-white min-w-[210px] w-full  top-[115%] left-0 opacity-0 invisible transition-all ease-linear duration-300 whitespace-nowrap;
 
             & > li {
                 @apply text-body relative flex justify-between;
