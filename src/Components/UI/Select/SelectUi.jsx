@@ -1,5 +1,5 @@
 import React from "react";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { BiChevronDown } from "react-icons/bi";
 
 const SelectUi = (props) => {
     return (
@@ -15,7 +15,7 @@ const SelectUi = (props) => {
                         </option>
                     ))}
             </select>
-            <KeyboardArrowDownIcon className="absolute top-1/2 right-3 -translate-y-1/2 icon-size" />
+            <BiChevronDown className="absolute top-1/2 right-3 -translate-y-1/2 text-lg" />
         </div>
     );
 };

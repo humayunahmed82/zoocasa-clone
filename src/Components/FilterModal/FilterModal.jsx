@@ -31,7 +31,7 @@ const FilterModal = (props) => {
                 </button>
             </div>
 
-            <div className="px-4 lg:px-12 py-5 overflow-y-auto max-h-[68vh] scrollbar-none">
+            <div className="lg:px-8 py-5 overflow-y-auto max-h-[68vh] scrollbar-none">
                 <div className="md:flex justify-between md:space-x-8 lg:space-x-14 space-y-8 md:space-y-0">
                     <FilterCol>
                         <div className="">
@@ -119,7 +119,7 @@ const FilterModal = (props) => {
                                         selected={sinceDate}
                                         onChange={(date) => setSinceDate(date)}
                                         dateFormat="MMM d, yyyy"
-                                        className="w-full h-9 border border-solid border-border_color px-3 py-3 rounded focus:outline-none focus:border-primary transition_custom appearance-none text-sm"
+                                        className="w-full h-9 border border-solid border-border_color px-3 py-3 rounded focus:outline-none focus:border-primary transition_custom appearance-none text-sm pt-3"
                                     />
                                 </div>
                                 <div className="text-2xl px-2 font-light">
@@ -131,7 +131,7 @@ const FilterModal = (props) => {
                                         selected={untilDate}
                                         onChange={(date) => setUntilDate(date)}
                                         dateFormat="MMM d, yyyy"
-                                        className="w-full h-9 border border-solid border-border_color px-3 py-3 rounded focus:outline-none focus:border-primary transition_custom appearance-none text-sm"
+                                        className="w-full h-9 border border-solid border-border_color px-3 py-3 rounded focus:outline-none focus:border-primary transition_custom appearance-none text-sm pt-3"
                                     />
                                 </div>
                             </div>

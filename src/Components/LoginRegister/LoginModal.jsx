@@ -11,11 +11,17 @@ const LoginModal = (props) => {
     };
 
     return (
-        <Modal className="max-w-md p-12" onClose={props.onClose}>
-            <button className="absolute top-4 right-4" onClick={props.onClose}>
+        <Modal
+            className="max-w-xs sm:max-w-md p-6 md:p-12"
+            onClose={props.onClose}
+        >
+            <button
+                className="absolute top-3 sm:top-4 right-3 sm:right-4"
+                onClick={props.onClose}
+            >
                 <MdClose className="text-2xl" />
             </button>
-            <form action="">
+            <form action="#">
                 <div className="space-y-3">
                     <h2 className="text-2xl font-normal font-frank">Sign In</h2>
                     <p className="text-[15px]">

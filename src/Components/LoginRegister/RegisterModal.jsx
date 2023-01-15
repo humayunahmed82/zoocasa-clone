@@ -13,15 +13,15 @@ const RegisterModal = (props) => {
 
     return (
         <Modal
-            className="max-w-4xl p-0 bg-cover bg-left"
+            className="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl p-0 bg-cover bg-left"
             style={{
                 backgroundImage: `url(${signupBG})`,
             }}
             onClose={props.onClose}
         >
-            <div className="max-w-md p-12 relative ml-auto bg-white">
+            <div className="max-w-md p-6 sm:p-12 relative ml-auto bg-white">
                 <button
-                    className="absolute top-4 right-4"
+                    className="absolute top-3 sm:top-4 right-3 sm:right-4"
                     onClick={props.onClose}
                 >
                     <MdClose className="text-2xl" />

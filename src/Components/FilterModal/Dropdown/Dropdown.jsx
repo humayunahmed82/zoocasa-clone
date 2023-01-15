@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { BiChevronDown } from "react-icons/bi";
 import InputCheck from "../../UI/Input/InputCheck";
 
 const Dropdown = () => {
@@ -21,7 +21,7 @@ const Dropdown = () => {
                 className="text-sm text-body border border-solid border-border_color py-2 px-3 rounded flex justify-between items-center cursor-pointer"
             >
                 <span className="block">House, Townhouse, Condo/Apt</span>
-                <KeyboardArrowDownIcon className="icon-size" />
+                <BiChevronDown className="text-lg" />
             </div>
 
             {!open && (
