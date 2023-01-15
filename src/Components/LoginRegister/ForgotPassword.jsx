@@ -7,7 +7,7 @@ import Modal from "../UI/Modal/Modal";
 const ForgotPassword = (props) => {
     return (
         <Modal className="max-w-md p-12 z-50" dropClassName="z-40">
-            <button className="absolute top-6 right-6" onClick={props.onClose}>
+            <button className="absolute top-4 right-4" onClick={props.onClose}>
                 <MdClose className="text-2xl" />
             </button>
             <form action="">

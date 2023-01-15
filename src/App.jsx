@@ -9,11 +9,13 @@ import Services from "./Pages/Services";
 import FilterModal from "./Components/FilterModal/FilterModal";
 import LoginModal from "./Components/LoginRegister/LoginModal";
 import ForgotPassword from "./Components/LoginRegister/ForgotPassword";
+import RegisterModal from "./Components/LoginRegister/RegisterModal";
 
 const App = () => {
     const [modalShown, setModalShown] = useState(false);
     const [modalLogin, setModalLogin] = useState(false);
     const [modalForgotPassword, setModalForgotPassword] = useState(false);
+    const [modalRegister, setModalRegister] = useState(false);
 
     return (
         <BrowserRouter>
@@ -36,6 +38,9 @@ const App = () => {
                     onForgot={() => {
                         setModalForgotPassword(true);
                     }}
+                    onRegister={() => {
+                        setModalRegister(true);
+                    }}
                     onClose={() => {
                         setModalLogin(false);
                     }}
@@ -46,6 +51,17 @@ const App = () => {
                 <ForgotPassword
                     onClose={() => {
                         setModalForgotPassword(false);
+                    }}
+                />
+            )}
+
+            {modalRegister && (
+                <RegisterModal
+                    onLogin={() => {
+                        setModalLogin(true);
+                    }}
+                    onClose={() => {
+                        setModalRegister(false);
                     }}
                 />
             )}

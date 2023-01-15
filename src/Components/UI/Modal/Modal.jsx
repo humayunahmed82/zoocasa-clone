@@ -13,6 +13,7 @@ const ModalOverlay = (props) => {
     return (
         <div
             className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white z-20 w-full p-5 ${props.className}`}
+            style={props.style}
         >
             {props.children}
         </div>
@@ -23,7 +24,7 @@ const Modal = (props) => {
     return (
         <Fragment>
             <Backdrop dropClassName={props.dropClassName} />
-            <ModalOverlay className={props.className}>
+            <ModalOverlay className={props.className} style={props.style}>
                 {props.children}
             </ModalOverlay>
         </Fragment>

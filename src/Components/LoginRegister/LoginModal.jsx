@@ -1,14 +1,18 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { MdClose } from "react-icons/md";
 import Button from "../UI/Button/Button";
 import Input from "../UI/Input/Input";
 import Modal from "../UI/Modal/Modal";
 
 const LoginModal = (props) => {
+    const Register = () => {
+        props.onRegister();
+        props.onClose();
+    };
+
     return (
         <Modal className="max-w-md p-12" onClose={props.onClose}>
-            <button className="absolute top-6 right-6" onClick={props.onClose}>
+            <button className="absolute top-4 right-4" onClick={props.onClose}>
                 <MdClose className="text-2xl" />
             </button>
             <form action="">
@@ -66,7 +70,7 @@ const LoginModal = (props) => {
                             <button
                                 type="button"
                                 className="text-[#4695c4] hover:text-body hover:underline ml-1"
-                                to="/"
+                                onClick={Register}
                             >
                                 Create An Account
                             </button>
