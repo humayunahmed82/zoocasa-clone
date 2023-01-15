@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CheckIcon from "@mui/icons-material/Check";
+import { MdDone } from "react-icons/md";
 
 const InputCheck = (props) => {
     return (
@@ -13,7 +13,7 @@ const InputCheck = (props) => {
                 className="hidden peer"
                 onChange={props.onChange}
             />
-            <CheckIcon className="absolute top-1/2 -translate-y-1/2 left-[1px] text-primary icon-size z-[-1] opacity-0 invisible peer-checked:opacity-100 peer-checked:visible" />
+            <MdDone className="absolute top-1/2 -translate-y-1/2 left-[1px] text-primary text-base z-[-1] opacity-0 invisible peer-checked:opacity-100 peer-checked:visible" />
             <span className="ml-2 pt-[2px]">{props.title}</span>
         </label>
     );

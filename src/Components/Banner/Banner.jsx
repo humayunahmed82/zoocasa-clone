@@ -1,7 +1,7 @@
 import React from "react";
+import TabView from "../UI/Tab/TabView";
+import SearchFrom from "./SearchFrom/SearchFrom";
 import bannerImage from "../../assets/banner.jpg";
-import TabView from "../Tab/TabView";
-import TabSearch from "../TabSearch/TabSearch";
 
 const Banner = (props) => {
     return (
@@ -30,9 +30,8 @@ const Banner = (props) => {
                                     id: 1,
                                     name: "Buy",
                                     content: (
-                                        <TabSearch
-                                            className="buy"
-                                            onClick={props.onClick}
+                                        <SearchFrom
+                                            onFilterModal={props.onFilterModal}
                                         />
                                     ),
                                 },
@@ -40,9 +39,8 @@ const Banner = (props) => {
                                     id: 2,
                                     name: "Rent",
                                     content: (
-                                        <TabSearch
-                                            className="rent"
-                                            onClick={props.onClick}
+                                        <SearchFrom
+                                            onFilterModal={props.onFilterModal}
                                         />
                                     ),
                                 },

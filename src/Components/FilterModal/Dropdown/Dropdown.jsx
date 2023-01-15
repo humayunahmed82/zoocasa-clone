@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import InputCheck from "./InputCheck";
+import InputCheck from "../../UI/Input/InputCheck";
 
 const Dropdown = () => {
     const [open, setOpen] = useState(true);

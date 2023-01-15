@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import LogoWhite from "../../assets/logo/logo-white.svg";
 import NavbarLink from "./NavbarLink";
-import MenuIcon from "@mui/icons-material/Menu";
-import PersonIcon from "@mui/icons-material/Person";
-
-import "./Navbar.scss";
+import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import NavMobile from "./NavMobile";
 
 const Header = (props) => {
-    const [open, setOpen] = useState(false);
+    const [mobileMenu, setMobileMenu] = useState(false);
 
     return (
         <>
@@ -26,15 +24,22 @@ const Header = (props) => {
                             <nav className="menu hidden lg:block">
                                 <NavbarLink />
                             </nav>
-                            <button className="text-white active:outline-none focus:outline-none flex items-center space-x-1 bg-transparent">
-                                <PersonIcon />
+
+                            <button
+                                onClick={props.onLogin}
+                                className="text-white active:outline-none focus:outline-none flex items-center space-x-1 bg-transparent"
+                            >
+                                <AiOutlineUser className="text-lg" />
                                 <span className="">Login</span>
                             </button>
+
                             <button
-                                onClick={() => setOpen(true)}
+                                onClick={() => {
+                                    setMobileMenu(true);
+                                }}
                                 className="text-white active:outline-none focus:outline-none lg:hidden"
                             >
-                                <MenuIcon />
+                                <AiOutlineMenu className="text-xl " />
                             </button>
                         </div>
                     </div>
@@ -42,13 +47,13 @@ const Header = (props) => {
             </header>
 
             <NavMobile
-                className={open ? "left-0" : "-left-[350px]"}
+                className={!mobileMenu ? "-left-80" : "left-0"}
                 overlyClassName={
-                    open ? "visible opacity-100" : "invisible opacity-0"
+                    !mobileMenu ? "invisible opacity-0" : "visible opacity-100"
                 }
-                menuClose={() => setOpen(false)}
-                onMenuClose={() => setOpen(false)}
-                overlyClose={() => setOpen(false)}
+                onClose={() => {
+                    setMobileMenu(false);
+                }}
             />
         </>
     );

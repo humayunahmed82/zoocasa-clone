@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { NavbarLinks } from "../../Data/Navbar";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
+import { MdRemove } from "react-icons/md";
+import { MdAdd } from "react-icons/md";
 
 const MobileLink = (props) => {
     const [subMenu, setSubMenu] = useState("");
 
     return (
-        <ul className="menu__link">
+        <ul className="">
             {NavbarLinks.map((nav, index) => (
-                <li key={nav.id}>
-                    <NavLink to={nav.url} onClick={props.onMenuClose}>
+                <li className="font-medium relative text-body" key={nav.id}>
+                    <NavLink
+                        className="block text-base font-semibold p-3 border-b border-solid border-body/10"
+                        to={nav.url}
+                        onClick={props.onClose}
+                    >
                         <span>{nav.name}</span>
                     </NavLink>
                     {nav.subMenu ? (
@@ -20,9 +24,9 @@ const MobileLink = (props) => {
                             onClick={() => setSubMenu(nav.name)}
                         >
                             {subMenu === nav.name ? (
-                                <RemoveIcon />
+                                <MdRemove className="text-2xl" />
                             ) : (
-                                <AddIcon />
+                                <MdAdd className="text-2xl" />
                             )}
                         </span>
                     ) : (
@@ -39,8 +43,9 @@ const MobileLink = (props) => {
                                 nav.subMenu.map((subItem, index) => (
                                     <li key={subItem.id}>
                                         <NavLink
+                                            className="pl-7 text-sm font-semibold block p-3 border-b border-solid border-body/10"
                                             to={subItem.url}
-                                            onClick={props.onMenuClose}
+                                            onClick={props.onClose}
                                         >
                                             {subItem.name}
                                         </NavLink>

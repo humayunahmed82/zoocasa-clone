@@ -31,7 +31,7 @@ const TabView = (props) => {
                             </li>
                         ))}
                     </ul>
-                    <div className="tab-content">
+                    <div className="tab-content ">
                         {props.tabs[activeTabIndex].content}
                     </div>
                 </>

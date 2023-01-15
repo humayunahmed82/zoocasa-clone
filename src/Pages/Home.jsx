@@ -1,23 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Banner from "../Components/Banner/Banner";
-import FilterModal from "../Components/FilterModal/FilterModal";
 
-const Home = () => {
-    const [modalOpen, setModalOpen] = useState(false);
-
+const Home = (props) => {
     return (
         <>
-            <Banner
-                onClick={() => {
-                    setModalOpen(true);
-                }}
-            />
-            <FilterModal
-                onClick={() => {
-                    setModalOpen(false);
-                }}
-                onModal={modalOpen}
-            />
+            <Banner onFilterModal={props.onFilterModal} />
         </>
     );
 };

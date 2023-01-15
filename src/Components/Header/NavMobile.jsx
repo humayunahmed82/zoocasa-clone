@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import LogoDark from "../../assets/logo/logo-dark.svg";
-import CloseIcon from "@mui/icons-material/Close";
+import { MdClose } from "react-icons/md";
 import MobileLink from "./MobileLink";
 
 const NavMobile = (props) => {
@@ -16,13 +16,13 @@ const NavMobile = (props) => {
                             <img src={LogoDark} alt="Logo" />
                         </NavLink>
                     </div>
-                    <button onClick={props.menuClose} className="text-body ">
-                        <CloseIcon className="" />
+                    <button onClick={props.onClose} className="text-body ">
+                        <MdClose className="text-2xl" />
                     </button>
                 </div>
 
                 <div className="mobile-nav">
-                    <MobileLink onMenuClose={props.onMenuClose} />
+                    <MobileLink onClose={props.onClose} />
                 </div>
 
                 <div className="mobile-off=canvas__footer"></div>
@@ -30,7 +30,7 @@ const NavMobile = (props) => {
 
             <div
                 className={`lg:hidden fixed top-0 left-0 w-full h-full bg-body/70 z-10 transition_custom ${props.overlyClassName}`}
-                onClick={props.overlyClose}
+                onClick={props.onClose}
             ></div>
         </>
     );
