@@ -30,7 +30,8 @@ module.exports = {
             },
 
             animation: {
-                fadeIn: "fadeIn 1s ease-out forwards",
+                fadeIn: "fadeIn 1s linear  forwards",
+                zoomIn: "zoomIn 1s linear  infinite",
             },
 
             keyframes: {
@@ -42,6 +43,17 @@ module.exports = {
                     to: {
                         opacity: 1,
                         transform: "translateY(0)",
+                    },
+                },
+                zoomIn: {
+                    "0%": {
+                        transform: "scale(1)",
+                    },
+                    "50%": {
+                        transform: "scale(1.3)",
+                    },
+                    "100%": {
+                        transform: "scale(1)",
                     },
                 },
             },

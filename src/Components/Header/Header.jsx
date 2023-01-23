@@ -11,7 +11,7 @@ const Header = (props) => {
 
     return (
         <>
-            <header className="py-5 lg:py-0 fixed top-0 left-0 w-full z-10">
+            <header className="py-5 lg:py-0 absolute top-0 left-0 w-full z-10">
                 <div className="container">
                     <div className="navbar flex justify-between items-center">
                         <div className="logo w-32 sm:w-36">
