@@ -4,14 +4,12 @@ import ButtonLink from "../Button/ButtonLink";
 
 const CardBlock = (props) => {
     return (
-        <div
-            className={`min-h-[34.3rem] p-6 border border-solid border-[#ececec] bg-white ${props.className}`}
-        >
-            <div className="">
+        <div className="min-h-[34.3rem] p-5 lg:p-6 border border-solid border-[#ececec] bg-white">
+            <div className="pb-2">
                 <div className="flex justify-between items-center">
                     <h2>
                         <a
-                            className="text-[26px] text-heading font-frank hover:underline hover:text-body transition_custom"
+                            className="text-2xl lg:text-[26px] text-heading font-frank hover:underline hover:text-body transition_custom"
                             href="#"
                         >
                             {props.title}

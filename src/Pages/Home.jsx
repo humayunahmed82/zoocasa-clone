@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../Components/Banner/Banner";
-import PropertiesSection from "../Components/PropertiesSection/PropertiesSection";
+import PopularLink from "../Components/PopularLink/PopularLink";
+import PropertiesSection from "../Components/Properties/PropertiesSection";
 
 const Home = (props) => {
     return (
@@ -8,6 +9,8 @@ const Home = (props) => {
             <Banner onFilterModal={props.onFilterModal} />
 
             <PropertiesSection />
+
+            <PopularLink />
         </>
     );
 };

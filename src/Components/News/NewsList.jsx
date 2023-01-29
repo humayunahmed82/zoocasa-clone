@@ -6,13 +6,13 @@ import { SlCalender } from "react-icons/sl";
 const NewsList = (props) => {
     return (
         <div className="flex items-start mt-8 first:mt-0">
-            <div className="w-40 pr-2">
+            <div className="w-28 sm:w-32 lg:w-40 pr-2">
                 <a href="#">
                     <img src={newsImage} alt="News" />
                 </a>
             </div>
-            <div className="w-[calc(100%_-_10rem)] pl-3">
-                <h4 className="text-base font-normal">
+            <div className="w-[calc(100%_-_7rem)] sm:w-[calc(100%_-_8rem)] lg:w-[calc(100%_-_10rem)] pl-2 lg:pl-3">
+                <h4 className="text-base font-normal -mt-1">
                     <a href="#">
                         Income Properties Available in Alberta Starting at
                         $499,800

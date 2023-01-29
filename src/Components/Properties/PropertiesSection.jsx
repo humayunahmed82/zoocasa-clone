@@ -1,6 +1,6 @@
 import React from "react";
 import { keywords } from "../../Data/keywords";
-import PropertiesItems from "../PropertiesItems/PropertiesItems";
+import PropertiesItems from "./PropertiesItems";
 import CardBlock from "../UI/CardBlock/CardBlock";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
@@ -8,6 +8,8 @@ import { MdStarRate } from "react-icons/md";
 
 import propertiesImage from "../../assets/properties-items.png";
 import hiringImage from "../../assets/hiring.png";
+import NewsList from "../News/NewsList";
+import ButtonLink from "../UI/Button/ButtonLink";
 
 // import Swiper core and required modules
 import { Navigation, Pagination } from "swiper";
@@ -17,14 +19,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./PropertiesSection.scss";
-import NewsList from "../News/NewsList";
-import ButtonLink from "../UI/Button/ButtonLink";
 
 const PropertiesSection = (props) => {
     return (
-        <div className=" py-8 bg-[#fcfcfc]">
+        <div className=" py-10 bg-[#fcfcfc]">
             <div className="container">
-                <div className="grid grid-cols-3 gap-5 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 ">
                     <div className="">
                         <CardBlock
                             title="Homes for Sale"
@@ -179,47 +179,59 @@ const PropertiesSection = (props) => {
                         </CardBlock>
                     </div>
                     <div className="">
-                        <CardBlock
-                            className="min-h-max"
-                            title="Google Reviews"
-                            buttonText="Rate us on Google"
-                        >
-                            <div className="flex space-x-2 items-center mt-6">
-                                <p className="text-[2.75rem] leading-tight font-normal">
-                                    4.8
-                                </p>
-                                <div className="relative">
-                                    <div
-                                        className="flex text-primary text-[2.75rem] absolute top-0
-                                    left-0 invisible z-[1]"
-                                        style={{
-                                            width: "90%",
-                                        }}
+                        <div className="p-6 border border-solid border-[#ececec] bg-white">
+                            <div className="flex justify-between items-center">
+                                <h2>
+                                    <a
+                                        className="text-2xl lg:text-[26px] text-heading font-frank hover:underline hover:text-body transition_custom"
+                                        href="#"
                                     >
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                    </div>
-                                    <div className="flex text-[#dbd7d6] text-[2.75rem]">
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
+                                        Google Reviews
+                                    </a>
+                                </h2>
+                                <ButtonLink className="border-body text-heading hover:bg-body hover:text-white">
+                                    <span className="">Rate us on Google</span>
+                                </ButtonLink>
+                            </div>
+                            <div className="">
+                                <div className="flex space-x-2 items-center mt-6">
+                                    <p className="text-[2.75rem] leading-tight font-normal">
+                                        4.8
+                                    </p>
+                                    <div className="relative">
+                                        <div
+                                            className="flex text-primary text-[2.75rem] absolute top-0
+                                    left-0 invisible z-[1]"
+                                            style={{
+                                                width: "90%",
+                                            }}
+                                        >
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                        </div>
+                                        <div className="flex text-[#dbd7d6] text-[2.75rem]">
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                        </div>
                                     </div>
                                 </div>
+                                <div className="flex justify-center space-x-5 mt-4">
+                                    <ButtonLink className="bg-body border-body text-white lg:h-12 lg:leading-[2rem] px-4 hover:text-body hover:bg-white">
+                                        Testimonials
+                                    </ButtonLink>
+                                    <ButtonLink className="bg-body border-body text-white lg:h-12 lg:leading-[2rem] px-4 hover:text-body hover:bg-white">
+                                        Meet our Agents
+                                    </ButtonLink>
+                                </div>
                             </div>
-                            <div className="flex justify-center space-x-5 mt-4">
-                                <ButtonLink className="bg-body border-body text-white lg:h-12 lg:leading-[2rem] px-4 hover:text-body hover:bg-white">
-                                    Testimonials
-                                </ButtonLink>
-                                <ButtonLink className="bg-body border-body text-white lg:h-12 lg:leading-[2rem] px-4 hover:text-body hover:bg-white">
-                                    Meet our Agents
-                                </ButtonLink>
-                            </div>
-                        </CardBlock>
+                        </div>
+
                         <div className="border border-solid border-[#ececec] bg-white p-2 mt-4">
                             <a className="block" href="#">
                                 <img
