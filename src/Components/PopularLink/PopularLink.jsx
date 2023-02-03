@@ -27,7 +27,7 @@ const PopularLink = (props) => {
                                     {item.links.map((link, index) => (
                                         <li key={link.id}>
                                             <a
-                                                className="leading-8 text-sm xl:text-base font-normal text-body block hover:underline transition_custom"
+                                                className="!leading-8 text-sm xl:text-base font-normal text-body block hover:underline transition_custom"
                                                 href={link.url}
                                             >
                                                 {link.name}
@@ -72,7 +72,7 @@ const PopularLink = (props) => {
                                     {item.links.map((link, index) => (
                                         <li key={link.id}>
                                             <a
-                                                className="leading-8 text-sm xl:text-base font-normal text-body block hover:underline transition_custom"
+                                                className="!leading-8 text-sm xl:text-base font-normal text-body block hover:underline transition_custom"
                                                 href={link.url}
                                             >
                                                 {link.name}
