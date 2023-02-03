@@ -9,6 +9,7 @@ const ForgotPassword = (props) => {
         <Modal
             className="max-w-xs sm:max-w-md p-6 md:p-12"
             dropClassName="z-40"
+            onClick={props.onClose}
         >
             <button
                 className="absolute top-3 sm:top-4 right-3 sm:right-4"

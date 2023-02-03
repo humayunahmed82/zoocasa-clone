@@ -21,19 +21,19 @@ const Header = (props) => {
     return (
         <>
             <header
-                className={`py-5 lg:py-0 top-0 left-0 w-full z-10 ${
-                    sticky ? "fixed bg-body" : "absolute"
+                className={`py-5 lg:py-0 top-0 left-0 w-full ${
+                    sticky ? "fixed bg-body z-10" : "absolute"
                 }`}
             >
                 <div className="container">
                     <div className="navbar flex justify-between items-center">
-                        <div className="logo w-32 sm:w-36">
+                        <div className="logo w-32 sm:w-36 relative z-30">
                             <NavLink to="/">
                                 <img src={LogoWhite} alt="Logo" />
                             </NavLink>
                         </div>
 
-                        <div className="flex space-x-3 sm:space-x-6">
+                        <div className="flex space-x-3 sm:space-x-6 relative z-30">
                             <nav className="menu hidden lg:block">
                                 <NavbarLink />
                             </nav>

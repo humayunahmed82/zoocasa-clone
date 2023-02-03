@@ -8,7 +8,7 @@ const NavMobile = (props) => {
     return (
         <>
             <div
-                className={`lg:hidden fixed top-0 w-72 sm:w-80 h-full bg-neutral-200 z-20 transition_custom ${props.className}`}
+                className={`lg:hidden fixed top-0 w-72 sm:w-80 h-full bg-neutral-200 z-40 transition_custom ${props.className}`}
             >
                 <div className="flex justify-between items-center p-5 bg-white">
                     <div className="logo w-32 sm:w-36">
@@ -29,7 +29,7 @@ const NavMobile = (props) => {
             </div>
 
             <div
-                className={`lg:hidden fixed top-0 left-0 w-full h-full bg-body/70 z-10 transition_custom ${props.overlyClassName}`}
+                className={`lg:hidden fixed top-0 left-0 w-full h-full bg-body/70 z-30 transition_custom ${props.overlyClassName}`}
                 onClick={props.onClose}
             ></div>
         </>
