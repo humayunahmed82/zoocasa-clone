@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// import Header & Footer
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
+
+// import Pages
+import Home from "./Pages/Home";
+import RealEstate from "./Pages/RealEstate";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
-import Home from "./Pages/Home";
 import Services from "./Pages/Services";
+
+// import Components
 import FilterModal from "./Components/FilterModal/FilterModal";
 import LoginModal from "./Components/LoginRegister/LoginModal";
 import ForgotPassword from "./Components/LoginRegister/ForgotPassword";
@@ -77,6 +84,8 @@ const App = () => {
                         />
                     }
                 />
+                <Route path="/real-estate" element={<RealEstate />} />
+
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />

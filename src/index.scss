@@ -7,7 +7,7 @@
 
 @layer base {
     body {
-        @apply font-muli text-body text-sm sm:text-base font-normal;
+        @apply font-muli text-body text-sm sm:text-base font-normal overflow-x-hidden;
     }
 }
 

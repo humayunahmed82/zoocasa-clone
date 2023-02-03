@@ -27,6 +27,11 @@ export const NavbarLinks = [
         ],
     },
     {
+        id: "realEstate",
+        url: "/real-estate",
+        name: "Real Estate",
+    },
+    {
         id: "about",
         url: "/about",
         name: "About",
