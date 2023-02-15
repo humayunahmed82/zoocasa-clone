@@ -43,16 +43,22 @@ const FilterModal = (props) => {
                                     id="active-listings"
                                     name="listingStatus"
                                     text="Active Listings"
+                                    value="active"
+                                    className="text-xs"
                                 />
                                 <InputRadio
                                     id="sold-listings"
                                     name="listingStatus"
                                     text="Sold Listings"
+                                    value="sold"
+                                    className="text-xs"
                                 />
                                 <InputRadio
                                     id="expired-listings"
                                     name="listingStatus"
                                     text="Expired Listings"
+                                    value="expired"
+                                    className="text-xs"
                                 />
                             </div>
                             <p className="text-xs mt-3">
