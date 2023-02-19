@@ -5,7 +5,7 @@ const InputCheck = (props) => {
     return (
         <label
             htmlFor={props.id}
-            className={`flex items-center cursor-pointer relative before:w-[18px] before:h-[18px] before:border before:border-solid before:border-border_color before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 pl-[18px] ${props.className}`}
+            className={`flex items-center cursor-pointer relative before:w-[18px] before:h-[18px] before:border before:border-solid before:border-border_color before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 pl-[18px] whitespace-nowrap ${props.className}`}
         >
             <input
                 id={props.id}

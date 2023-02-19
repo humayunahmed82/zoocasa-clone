@@ -18,7 +18,7 @@ const DropdownButton = (props) => {
 const DropdownContent = (props) => {
     return (
         <div
-            className={`bg-white border border-solid border-black py-2 px-4 mt-[2px] absolute top-full right-0 ${props.isActive}`}
+            className={`bg-white border border-solid border-black py-2 px-4 mt-[2px] absolute top-full left-0 ${props.isActive}`}
         >
             {props.children}
         </div>
@@ -38,7 +38,7 @@ const Dropdown = (props) => {
     });
 
     return (
-        <div ref={dropdownRef} className="relative">
+        <div ref={dropdownRef} className={`relative ${props.className}`}>
             <DropdownButton
                 btnText={props.btnText}
                 onClick={() => setIsActive(!isActive)}

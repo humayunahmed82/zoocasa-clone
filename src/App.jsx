@@ -84,7 +84,16 @@ const App = () => {
                         />
                     }
                 />
-                <Route path="/real-estate" element={<RealEstate />} />
+                <Route
+                    path="/real-estate"
+                    element={
+                        <RealEstate
+                            onFilterModal={() => {
+                                setModalShown(true);
+                            }}
+                        />
+                    }
+                />
 
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />

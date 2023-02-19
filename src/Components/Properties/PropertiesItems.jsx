@@ -1,4 +1,6 @@
 import React from "react";
+
+// Import Icon
 import { BsFillHeartFill } from "react-icons/bs";
 import { BiBed } from "react-icons/bi";
 import { BiBath } from "react-icons/bi";

@@ -1,15 +1,19 @@
 import React from "react";
 import { keywords } from "../../Data/keywords";
-import PropertiesItems from "./PropertiesItems";
-import CardBlock from "../UI/CardBlock/CardBlock";
-import { MdArrowBackIosNew } from "react-icons/md";
-import { MdArrowForwardIos } from "react-icons/md";
-import { MdStarRate } from "react-icons/md";
 
+// Import Images
 import propertiesImage from "../../assets/properties-items.png";
 import hiringImage from "../../assets/hiring.png";
+
+// Import components
+import PropertiesItems from "./PropertiesItems";
+import CardBlock from "../UI/CardBlock/CardBlock";
 import NewsList from "../News/NewsList";
 import ButtonLink from "../UI/Button/ButtonLink";
+
+// Import Icon
+import { MdArrowBackIosNew } from "react-icons/md";
+import { MdArrowForwardIos } from "react-icons/md";
 
 // import Swiper core and required modules
 import { Navigation, Pagination } from "swiper";

@@ -1,6 +1,10 @@
 import React from "react";
-import { FiMap } from "react-icons/fi";
+
+// Import Components
 import ButtonLink from "../Button/ButtonLink";
+
+// Import Icon
+import { FiMap } from "react-icons/fi";
 
 const CardBlock = (props) => {
     return (
