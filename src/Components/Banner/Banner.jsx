@@ -1,7 +1,9 @@
 import React from "react";
-import SearchFrom from "./SearchFrom/SearchFrom";
+
+// Import components
 import brushStroke1 from "../../assets/brush-stroke-1.png";
 import brushStroke2 from "../../assets/brush-stroke-2.png";
+import SearchFrom from "../Search/SearchFrom";
 
 const Banner = (props) => {
     return (
