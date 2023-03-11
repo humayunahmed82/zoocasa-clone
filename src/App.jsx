@@ -7,8 +7,8 @@ import Footer from "./Components/Footer/Footer";
 
 // import Pages
 import Home from "./Pages/Home";
-import RealEstate from "./Pages/RealEstate";
-import About from "./Pages/About";
+import GridView from "./Pages/Grid-view";
+import MapView from "./Pages/MapView";
 import Contact from "./Pages/Contact";
 import Services from "./Pages/Services";
 
@@ -85,17 +85,25 @@ const App = () => {
                     }
                 />
                 <Route
-                    path="/real-estate"
+                    path="/grid-view"
                     element={
-                        <RealEstate
+                        <GridView
                             onFilterModal={() => {
                                 setModalShown(true);
                             }}
                         />
                     }
                 />
-
-                <Route path="/about" element={<About />} />
+                <Route
+                    path="/map-view"
+                    element={
+                        <MapView
+                            onFilterModal={() => {
+                                setModalShown(true);
+                            }}
+                        />
+                    }
+                />
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>

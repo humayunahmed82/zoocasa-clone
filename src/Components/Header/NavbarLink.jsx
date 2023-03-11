@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
+// Import Data
 import { NavbarLinks } from "../../Data/Navbar";
+
+// Import Icon
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const NavbarLink = () => {

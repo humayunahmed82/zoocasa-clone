@@ -5,6 +5,7 @@ import { suggestions } from "../../Data/suggestions";
 
 // Import components
 import Button from "../UI/Button/Button";
+import Autocomplete from "./Autocomplete";
 
 // Import Icon
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -45,16 +46,12 @@ const SearchFrom = (props) => {
     const handleChange = (event) => {
         setValue(event.target.value);
     };
-    const suggestionClick = (suggestion) => {
-        setValue(suggestion);
-        setShowSuggestion(false);
-    };
 
     return (
         <form>
             <div
                 ref={searchRef}
-                className="bg-white rounded-md flex flex-wrap sm:flex-nowrap relative"
+                className={`bg-white flex flex-wrap sm:flex-nowrap relative ${props.className}`}
             >
                 <div
                     ref={dropdownRef}
@@ -116,29 +113,11 @@ const SearchFrom = (props) => {
                 </div>
 
                 {showSuggestion && (
-                    <div className="absolute top-full z-20 w-full overflow-y-scroll bg-white rounded max-h-[calc(75vh_-_160px)] shadow">
-                        <div className="flex p-3 items-center">
-                            <AiOutlineStar className="text-lg" />
-                            <span className="pl-1">Popular Searches</span>
-                        </div>
-                        <ul className="">
-                            {suggestionOptions.map((option) => (
-                                <li
-                                    key={option.id}
-                                    onClick={() =>
-                                        suggestionClick(option.location)
-                                    }
-                                    className="text-sm font-normal p-3 pr-0 text-body justify-between flex
-                            capitalize hover:bg-[#ececec] hover:font-bold"
-                                >
-                                    {option.location}
-                                    <span className="ml-8 mr-4 whitespace-nowrap">
-                                        {option.city}
-                                    </span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    <Autocomplete
+                        suggestionOptions={suggestionOptions}
+                        setValue={setValue}
+                        setShowSuggestion={setShowSuggestion}
+                    />
                 )}
             </div>
         </form>

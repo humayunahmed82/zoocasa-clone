@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
+
+// Import Autocomplete
+import { suggestions } from "../../Data/suggestions";
 
 // Import components
 import Button from "../UI/Button/Button";
 import InputRadio from "../UI/Input/InputRadio";
 import InputCheck from "../UI/Input/InputCheck";
 import Input from "../UI/Input/Input";
+import Autocomplete from "./Autocomplete";
 
 import Dropdown from "./Dropdown";
 
@@ -17,13 +22,31 @@ import { FiMap } from "react-icons/fi";
 const SearchBar = (props) => {
     const [show, setShow] = useState(true);
 
-    const [view, setView] = useState(false);
+    // Search Autocomplete
+    const [value, setValue] = useState("");
+    const [showSuggestion, setShowSuggestion] = useState(false);
+
+    const suggestionOptions = suggestions.filter((option) =>
+        option.location.toLowerCase().includes(value.toLowerCase())
+    );
+
+    const searchRef = useRef(null);
+
+    window.addEventListener("click", (e) => {
+        if (!showSuggestion && !searchRef.current?.contains(e.target)) {
+            setShowSuggestion(false);
+        }
+    });
+
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    };
 
     return (
-        <div className="h-[5.25rem] px-4 py-5 border border-solid border-[#ececec]">
+        <div className="h-[5.25rem] px-4 py-5 border border-solid border-[#ececec] shadow-custom">
             <form>
                 <div className="w-full h-full flex space-x-2">
-                    <div className="relative w-full block">
+                    <div ref={searchRef} className="relative w-full block">
                         <label className="absolute top-1/2 left-2 -translate-y-1/2">
                             <MdSearch className="text-2xl" />
                         </label>
@@ -31,7 +54,18 @@ const SearchBar = (props) => {
                             type="text"
                             className="text-lg px-3 py-2 pl-10  border border-solid border-[#b6b5b5] w-full focus:outline-none h-full font-normal rounded-sm"
                             placeholder="Search "
+                            value={value}
+                            onChange={handleChange}
+                            onFocus={() => setShowSuggestion(true)}
                         />
+
+                        {showSuggestion && (
+                            <Autocomplete
+                                suggestionOptions={suggestionOptions}
+                                setValue={setValue}
+                                setShowSuggestion={setShowSuggestion}
+                            />
+                        )}
                     </div>
 
                     <div className="">
@@ -241,22 +275,24 @@ const SearchBar = (props) => {
                     </div>
 
                     <div className="">
-                        <Button
-                            onClick={() => setView(!view)}
-                            className="lg:px-4 md:px-4 lg:!h-10 rounded-sm bg-white text-body border-body hover:bg-body hover:text-white"
-                        >
-                            {!view ? (
-                                <>
-                                    <TfiLayoutGrid2 className="inline-block mr-2" />
-                                    <span>List View</span>
-                                </>
-                            ) : (
-                                <>
-                                    <FiMap className="inline-block mr-2" />
-                                    <span>Map View</span>
-                                </>
-                            )}
-                        </Button>
+                        {props.MapView && (
+                            <NavLink
+                                to={props.MapView}
+                                className="w-full md:w-auto lg:px-4 md:px-4 min-h-[40px] leading-10 border border-solid rounded-sm bg-white text-body border-body hover:bg-body hover:text-white whitespace-nowrap block transition-all duration-200 ease-linear"
+                            >
+                                <FiMap className="inline-block mr-2" />
+                                <span>Map View</span>
+                            </NavLink>
+                        )}
+                        {props.GridView && (
+                            <NavLink
+                                to={props.GridView}
+                                className="w-full md:w-auto lg:px-4 md:px-4 min-h-[40px] leading-10 border border-solid rounded-sm bg-white text-body border-body hover:bg-body hover:text-white whitespace-nowrap block transition-all duration-200 ease-linear"
+                            >
+                                <TfiLayoutGrid2 className="inline-block mr-2" />
+                                <span>List View</span>
+                            </NavLink>
+                        )}
                     </div>
 
                     <div className="">

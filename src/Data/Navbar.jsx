@@ -27,14 +27,14 @@ export const NavbarLinks = [
         ],
     },
     {
-        id: "realEstate",
-        url: "/real-estate",
-        name: "Real Estate",
+        id: "grid-view",
+        url: "/grid-view",
+        name: "Grid View",
     },
     {
-        id: "about",
-        url: "/about",
-        name: "About",
+        id: "map-view",
+        url: "/map-view",
+        name: "Map View",
     },
     {
         id: "services",

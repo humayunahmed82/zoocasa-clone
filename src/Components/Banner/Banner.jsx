@@ -32,7 +32,10 @@ const Banner = (props) => {
                     </div>
 
                     <div className="mt-8">
-                        <SearchFrom onFilterModal={props.onFilterModal} />
+                        <SearchFrom
+                            className="rounded-md"
+                            onFilterModal={props.onFilterModal}
+                        />
                     </div>
                 </div>
             </div>
