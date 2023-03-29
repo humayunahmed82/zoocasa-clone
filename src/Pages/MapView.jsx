@@ -23,7 +23,7 @@ const MapView = (props) => {
             </div>
 
             <div className="relative h-[calc(100vh_-_159px)]">
-                <div className="absolute top-0 left-0 w-80 h-full overflow-hidden shadow-custom bg-white">
+                <div className="absolute top-0 left-0 w-80 h-full overflow-hidden shadow-custom bg-white hidden sm:block">
                     <ListingsSorted className="w-52" />
 
                     <div className="p-4 space-y-4 overflow-auto h-full">
@@ -206,7 +206,7 @@ const MapView = (props) => {
                     </div>
                 </div>
 
-                <div className="ml-80 h-full">
+                <div className="sm:ml-80 h-full">
                     <iframe
                         className="w-full h-full"
                         id="gmap_canvas"
