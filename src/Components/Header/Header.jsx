@@ -22,7 +22,7 @@ const Header = (props) => {
         <>
             <header
                 className={`py-5 lg:py-0 top-0 left-0 w-full bg-body ${
-                    sticky ? "fixed z-10" : "absolute"
+                    sticky ? "fixed z-20" : "absolute"
                 }`}
             >
                 <div className="container">

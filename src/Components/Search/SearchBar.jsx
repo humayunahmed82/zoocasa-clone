@@ -43,7 +43,7 @@ const SearchBar = (props) => {
     };
 
     return (
-        <div className="h-[5.25rem] px-4 py-5 border border-solid border-[#ececec] shadow-custom">
+        <div className="h-[5.25rem] px-4 py-5 border border-solid border-[#ececec] shadow-custom z-10 relative">
             <form>
                 <div className="w-full h-full flex space-x-2">
                     <div ref={searchRef} className="relative w-full block">

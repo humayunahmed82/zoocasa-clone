@@ -10,7 +10,6 @@ import Autocomplete from "./Autocomplete";
 // Import Icon
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowUp } from "react-icons/md";
-import { AiOutlineStar } from "react-icons/ai";
 
 const SearchFrom = (props) => {
     // Dropdown
@@ -70,7 +69,7 @@ const SearchFrom = (props) => {
                         )}
                     </div>
                     {isActive && (
-                        <ul className="absolute top-full left-0 bg-white w-full text-center border border-solid border-border_color rounded-b">
+                        <ul className="absolute top-full left-0 bg-white w-full text-center border border-solid border-border_color rounded-b z-10">
                             {options.map((option, index) => (
                                 <li
                                     key={index}

@@ -18,7 +18,7 @@ const DropdownButton = (props) => {
 const DropdownContent = (props) => {
     return (
         <div
-            className={`bg-white border border-solid border-black py-2 px-4 mt-[2px] absolute top-full left-0 ${props.isActive}`}
+            className={`bg-white border border-solid border-black py-2 px-4 mt-[2px] absolute top-full z-10 left-0 ${props.isActive}`}
         >
             {props.children}
         </div>

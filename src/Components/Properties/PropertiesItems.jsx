@@ -9,7 +9,7 @@ import { MdApartment } from "react-icons/md";
 const PropertiesItems = (props) => {
     return (
         <div className="">
-            <div className="relative">
+            <div className="relative ">
                 <img
                     className="rounded-t h-60 w-full object-cover object-center"
                     src={props.propertiesImage}
@@ -32,7 +32,7 @@ const PropertiesItems = (props) => {
                     </span>
                 )}
             </div>
-            <div className="p-[0.8rem] border border-solid border-[#ececec] border-t-0 rounded-b space-y-5">
+            <div className="p-[0.8rem] border border-solid border-[#ececec] border-t-0 rounded-b space-y-5 bg-white">
                 <div className="flex justify-between items-end">
                     <p className="text-2xl font-normal">{props.price}</p>
                     <span className="text-xs text-body font-normal">
