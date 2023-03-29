@@ -22,7 +22,7 @@ const MapView = (props) => {
                 <SearchFrom onFilterModal={props.onFilterModal} />
             </div>
 
-            <div className="relative h-[calc(100vh_-_159px)]">
+            <div className="relative h-[calc(100vh_-_156px)]">
                 <div className="absolute top-0 left-0 w-80 h-full overflow-hidden shadow-custom bg-white hidden sm:block">
                     <ListingsSorted className="w-52" />
 
